@@ -1,0 +1,9 @@
+# -*- coding:utf-8 -*-
+
+#filename:mymodule.py
+def sayhi():
+    print r"hi,this is my module speaking..."
+    
+version='0.1'
+
+#End of mymodule.py
