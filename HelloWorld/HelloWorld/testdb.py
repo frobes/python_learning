@@ -2,14 +2,14 @@
 from django.http import  HttpResponse
 from TestModel.models import  Test
 
-'''
+
 #数据库操作：添加数据
 def testdb(request):
     test1 = Test(name = 'runoob')
     test1.save()
     return  HttpResponse("<p>数据添加成功！</p>")
 
-
+'''
 #数据库操作：获取数据
 def testdb(request):
     #初始化
@@ -38,7 +38,7 @@ def testdb(request):
 
 
 #数据库操作：更新数据
-def testdb(request):
+def testdb(request):s
     #修改其中一个id=1的name字段，再save,相当于SQL中的UPDATE
     test1 = Test.objects.get(id=1)
     test1.name = 'Google'
@@ -51,7 +51,7 @@ def testdb(request):
     #Test.objects.all().update(name='Google')
     return HttpResponse("<p>修改成功</p>")
 
-'''
+
 
 
 #数据库操作：删除数据
@@ -67,3 +67,4 @@ def testdb(request):
 
     return  HttpResponse("<p>删除成功</p>")
 
+'''
