@@ -20,12 +20,22 @@ from django.urls import path
 #    path('admin/', admin.site.urls),
 #]
 
+
+#第二种改法
 #url配置
-from django.conf.urls import  url
-from . import  view
+#from django.conf.urls import  url
+#from . import  view
 
 #访问地址http://127.0.0.1:8000
 #urlpatterns = [ url(r'^$',view.hello),]
 
 #访问地址http://127.0.0.1:8000/hello
-urlpatterns = [ url(r'^hello$',view.hello),]
+#urlpatterns = [ url(r'^hello$',view.hello),]
+
+
+
+#第3种改法
+from django.conf.urls import  *
+from . import  view,testdb
+urlpatterns = [url(r'^hello$',view.hello),url(r'^testdb$',testdb.testdb),]
+
